@@ -20,11 +20,12 @@ The set of variables that were calculated from the base data are:
 Variables:
 ==========
 - X_total:            Data frame after combining the training and test data
-- activity_labels:    Activity labels of the base data
-- mean_sd_columns:    Contains all the column names that are measure
-                      either the mean or standard deviation
-- X_required_columns: Data that contains only mean_sd_columns 
-- tidy_dataset:       Data set with the average of each variable for 
+- activity_labels:    Data frame containing activity labels of the base data
+- mean_sd_columns:    Vector that contains all the column names that measure
+                      either the mean or standard deviation in the base data
+- X_required_columns: Data frame that contains only mean_sd_columns, i.e. the 
+              columns that are measure either mean or standard deviation
+- tidy_dataset:       Data frame with the average of each variable for 
                       each activity and each subject
 
 
@@ -72,7 +73,8 @@ The following files are available for the train and test data. Their description
 
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
-
-
-
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
 

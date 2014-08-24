@@ -15,10 +15,11 @@ Function of the run_analysis.R script:
    variable for each activity and each subject
 
 Finally, it writes the new tidy dataset to a tab separated text file called
-"text.txt"
+"tidy.txt"
 
 The script is commented to highlight the assumptions and functions used to 
-achieve the goals of creating the required tidy data set.
+achieve the goals of creating the required tidy data set. You can read
+help of any function in R by typing ?<funcname> on the R console.
 
 The repo includes the CodeBook.md file
 =======================================
