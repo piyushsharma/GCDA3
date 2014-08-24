@@ -36,7 +36,7 @@ measurement_means <- rowMeans(X_total)
 measurement_sd <- apply(X_total, 1, sd)
 
 # Note: If you mean separate mean and measurement containing columns, then 
-# 2) Use grep to find the indices and then the names
+# 2) Use grep to find the indices and using that we can get the names
 required_columns <- grep(".*mean.*|.*std.*", feature_names)
 mean_sd_columns <- feature_names[c(required_columns)]
 # Filter all the required columns (i.e. which have mean or sd data)
@@ -58,5 +58,5 @@ prepare_tidy <- melt(X_required_columns, id=c("subject","activity"))
 tidy_dataset <- dcast(prepare_tidy, subject+activity ~ variable, mean)
 head(tidy_dataset)
 
-# Write the final tidy datasert to a tab separated text file
+# Write the final tidy dataset to a tab separated text file
 write.table(tidy_dataset, "tidy.txt", sep="\t")
