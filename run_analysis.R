@@ -59,4 +59,4 @@ tidy_dataset <- dcast(prepare_tidy, subject+activity ~ variable, mean)
 head(tidy_dataset)
 
 # Write the final tidy dataset to a tab separated text file
-write.table(tidy_dataset, "tidy.txt", sep="\t")
+write.table(tidy_dataset, "tidy.txt", sep="\t", row.name=FALSE)
